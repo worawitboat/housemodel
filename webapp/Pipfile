@@ -1,0 +1,22 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+
+[packages]
+django = "*"
+numpy = "*"
+scikit-learn = "*"
+pandas = "*"
+pyyaml = "*"
+
+[requires]
+python_version = "3.7.4"
+
+[scripts]
+dropdata = "rm -rf db.sqlite3 irisapp/migrations myapp/migrations webapp/migrations"
+migrate = "bash -c 'python manage.py makemigrations irisapp myapp webapp; python manage.py makemigrations; python manage.py migrate irisapp myapp webapp; python manage.py migrate'"
+loaddata = "bash -c 'python manage.py loaddata Species'"
+server = "python manage.py runserver"

@@ -1,0 +1,12 @@
+- model: irisapp.Species
+  pk: 1
+  fields:
+    name: Setosa
+- model: irisapp.Species
+  pk: 2
+  fields:
+    name: Versicolor
+- model: irisapp.Species
+  pk: 3
+  fields:
+    name: Virginica

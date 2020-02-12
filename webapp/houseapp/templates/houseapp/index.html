@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<head>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <!------ Include the above in your HEAD tag ---------->
+</head>
+
+<body>
+    <div class="container">
+        <div id="loginbox" style="margin-top:50px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <div class="panel-title">ตรวจ houseapp</div>
+                </div>
+
+                <div style="padding-top:30px" class="panel-body">
+
+                    <div style="display:none" id="login-alert" class="alert alert-danger col-sm-12"></div>
+
+                    <form id="loginform" class="form-horizontal" role="form" action="" method="POST">
+
+                        {% csrf_token %}
+
+                        <div style="margin-bottom: 25px" class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                            <input id="login-username" type="number" class="form-control" name="X1"
+                                value="{{ X1 }}" placeholder="transaction date" required>
+                        </div>
+
+                        <div style="margin-bottom: 25px" class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                            <input id="login-password" type="number" class="form-control" name="X2"
+                                value="{{ X2 }}" placeholder="house age" required>
+                        </div>
+
+                        <div style="margin-bottom: 25px" class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                            <input id="login-password" type="number" class="form-control" name="X3"
+                                value="{{ X3 }}" placeholder="distance to the nearest MRT station" required>
+                        </div>
+
+                        <div style="margin-bottom: 25px" class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                            <input id="login-password" type="number" class="form-control" name="X4"
+                                value="{{ X4 }}" placeholder="number of convenience stores" required>
+                        </div>
+
+                        <div style="margin-bottom: 25px" class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                            <input id="login-password" type="number" class="form-control" name="X5"
+                                value="{{ X5 }}" placeholder="latitude" required>
+                        </div>
+
+                        <div style="margin-bottom: 25px" class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                            <input id="login-password" type="number" class="form-control" name="X6"
+                                value="{{ X6 }}" placeholder="longitude" required>
+                        </div>
+
+
+                        <div style="margin-top:10px" class="form-group">
+                            <div class="col-sm-12 controls">
+                                <button type="submit" id="btn-login" class="btn btn-success">house price of unit area</button>
+                                <a id="btn-fblogin" href="#" class="btn btn-primary">{{ result }}</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+    </div>
+</body>
